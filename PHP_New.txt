@@ -1,0 +1,60 @@
+<?php
+
+// Variables
+$name = 'John Doe';
+$age = 30;
+
+// Conditional statement
+if ($age >= 18) {
+    echo $name . ' is an adult.';
+} else {
+    echo $name . ' is a minor.';
+}
+
+// Arrays
+$colors = array('red', 'green', 'blue');
+echo '<br>Favorite color: ' . $colors[1];
+
+// Loops
+for ($i = 0; $i < count($colors); $i++) {
+    echo '<br>Color ' . ($i + 1) . ': ' . $colors[$i];
+}
+
+// Functions
+function greet($name) {
+    echo '<br>Hello, ' . $name . '!';
+}
+greet($name);
+
+// Classes and objects
+class Person {
+    public $name;
+    public $age;
+
+    function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    function greet() {
+        echo '<br>Hello, my name is ' . $this->name . ' and I am ' . $this->age . ' years old.';
+    }
+}
+
+$person = new Person($name, $age);
+$person->greet();
+
+?>
+
+When run, this program will output:
+
+
+John Doe is an adult.
+Favorite color: green
+Color 1: red
+Color 2: green
+Color 3: blue
+Hello, John Doe!
+Hello, my name is John Doe and I am 30 years old.
+
+
